@@ -3,11 +3,9 @@ using DitchDietsDiary.Core;
 using DitchDietsDiary.Core.Interfaces;
 using Microsoft.Extensions.Logging;
 using Moq;
-using NUnit.Framework;
 
 namespace DitchDietsDiaryUnitTests
 {
-    [TestFixture]
     public class FoodLogControllerTests
     {
         [Fact]

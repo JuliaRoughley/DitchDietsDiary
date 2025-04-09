@@ -8,6 +8,7 @@ namespace DitchDietsDiary.Core.Interfaces
 {
     public interface IFoodLoggingRepository
     {
+        FoodEntryModel GetMealEntry(FoodEntryRequestModel foodEntryRequest);
         void SaveMealEntry(FoodEntryModel foodEntryModel);
     }
 }
