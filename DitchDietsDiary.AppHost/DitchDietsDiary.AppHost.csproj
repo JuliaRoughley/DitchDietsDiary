@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DitchDietsDiary\DitchDietsDiary.csproj" />
+    <ProjectReference Include="..\DitchDietsDiary\DitchDietsDiary.Api.csproj" />
   </ItemGroup>
 
 </Project>

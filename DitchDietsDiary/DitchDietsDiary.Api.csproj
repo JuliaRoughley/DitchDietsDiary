@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DitchDietsDiary.Core\DitchDietsDiary.Core.csproj" />
     <ProjectReference Include="..\DitchDietsDiary.ServiceDefaults\DitchDietsDiary.ServiceDefaults.csproj" />
   </ItemGroup>
 

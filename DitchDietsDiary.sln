@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary", "DitchDietsDiary\DitchDietsDiary.csproj", "{C66E7B87-0E1A-FD9E-8B20-8CE93B567705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Api", "DitchDietsDiary\DitchDietsDiary.Api.csproj", "{C66E7B87-0E1A-FD9E-8B20-8CE93B567705}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.AppHost", "DitchDietsDiary.AppHost\DitchDietsDiary.AppHost.csproj", "{B6200EAE-EB0D-41A0-9F1F-6C96BF5FB10E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.ServiceDefaults", "DitchDietsDiary.ServiceDefaults\DitchDietsDiary.ServiceDefaults.csproj", "{44B16142-E1C7-F5EC-5D23-5763CF84CE10}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiaryUnitTests", "DitchDietsDiaryUnitTests\DitchDietsDiaryUnitTests.csproj", "{2ADD5434-AA77-43DF-90A8-4E6AFD19437B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Core", "DitchDietsDiary.Core\DitchDietsDiary.Core.csproj", "{5A2162A5-BD72-4960-9EAD-F832C27096A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Infrastructure", "DitchDietsDiary.Infrastructure\DitchDietsDiary.Infrastructure.csproj", "{B7863965-47D1-4E52-B9A5-929F0B599369}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2ADD5434-AA77-43DF-90A8-4E6AFD19437B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ADD5434-AA77-43DF-90A8-4E6AFD19437B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ADD5434-AA77-43DF-90A8-4E6AFD19437B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2162A5-BD72-4960-9EAD-F832C27096A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2162A5-BD72-4960-9EAD-F832C27096A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2162A5-BD72-4960-9EAD-F832C27096A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2162A5-BD72-4960-9EAD-F832C27096A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7863965-47D1-4E52-B9A5-929F0B599369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7863965-47D1-4E52-B9A5-929F0B599369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7863965-47D1-4E52-B9A5-929F0B599369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7863965-47D1-4E52-B9A5-929F0B599369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
