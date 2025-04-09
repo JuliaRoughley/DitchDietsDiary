@@ -1,7 +1,7 @@
 ﻿using DitchDietsDiary.Core;
 using DitchDietsDiary.Core.Interfaces;
 
-namespace DitchDietsDiary.Infrastructure
+namespace DitchDietsDiary.Infrastructure.Repositories
 {
     public class FoodLoggingRepository : IFoodLoggingRepository
     {

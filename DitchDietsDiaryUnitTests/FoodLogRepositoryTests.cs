@@ -1,6 +1,5 @@
 ﻿using DitchDietsDiary.Core;
-using DitchDietsDiary.Infrastructure;
-using Assert = Xunit.Assert;
+using DitchDietsDiary.Infrastructure.Repositories;
 
 namespace DitchDietsDiaryUnitTests
 {
