@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Api", "DitchDietsDiary\DitchDietsDiary.Api.csproj", "{C66E7B87-0E1A-FD9E-8B20-8CE93B567705}"
 EndProject
@@ -14,6 +14,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Core", "DitchDietsDiary.Core\DitchDietsDiary.Core.csproj", "{5A2162A5-BD72-4960-9EAD-F832C27096A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Infrastructure", "DitchDietsDiary.Infrastructure\DitchDietsDiary.Infrastructure.csproj", "{B7863965-47D1-4E52-B9A5-929F0B599369}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ditchdietsdiary.frontend.client", "DitchDietsDiary.Frontend\ditchdietsdiary.frontend.client\ditchdietsdiary.frontend.client.esproj", "{6768001F-9BAC-4EBF-CB75-EE5AC418D050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DitchDietsDiary.Frontend.Server", "DitchDietsDiary.Frontend\DitchDietsDiary.Frontend.Server\DitchDietsDiary.Frontend.Server.csproj", "{30456F8B-D4D5-4435-9C43-86B5867348CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +54,16 @@ Global
 		{B7863965-47D1-4E52-B9A5-929F0B599369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7863965-47D1-4E52-B9A5-929F0B599369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7863965-47D1-4E52-B9A5-929F0B599369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6768001F-9BAC-4EBF-CB75-EE5AC418D050}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{30456F8B-D4D5-4435-9C43-86B5867348CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30456F8B-D4D5-4435-9C43-86B5867348CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30456F8B-D4D5-4435-9C43-86B5867348CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30456F8B-D4D5-4435-9C43-86B5867348CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

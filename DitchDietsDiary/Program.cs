@@ -20,6 +20,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("https://localhost:56853") // Allow requests from your frontend
+              .AllowAnyHeader()                     // Allow all headers (e.g., Content-Type)
+              .AllowAnyMethod();                    // Allow all HTTP methods (GET, POST, etc.)
+    });
+});
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
@@ -30,6 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 
