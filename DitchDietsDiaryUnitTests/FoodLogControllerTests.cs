@@ -11,7 +11,7 @@ namespace DitchDietsDiaryUnitTests
     public class FoodLogControllerTests
     {
         [Fact]
-        public void LogMealEntry_PersistsMealEntry()
+        public void LogMealEntry_CallsRepositoryWithCorrectData()
         {
             //Arrange
             var mockPersistenceHandling = new Mock<IFoodLoggingRepository>();
@@ -32,11 +32,11 @@ namespace DitchDietsDiaryUnitTests
 
             // Assert
             mockPersistenceHandling.Verify(repo => repo.SaveMealEntry(It.Is<FoodEntryModel>(m =>
-                m.FoodEntry == foodEntry.FoodEntry && // Use == for comparison
-                m.TimeEaten == foodEntry.TimeEaten && // Use == for comparison
-                m.PreMealHungerLevel == foodEntry.PreMealHungerLevel && // Use == for comparison
-                m.PostMealFullnessLevel == foodEntry.PostMealFullnessLevel && // Use == for comparison
-                m.Mood == foodEntry.Mood // Use == for comparison
+                m.FoodEntry == foodEntry.FoodEntry && 
+                m.TimeEaten == foodEntry.TimeEaten && 
+                m.PreMealHungerLevel == foodEntry.PreMealHungerLevel && 
+                m.PostMealFullnessLevel == foodEntry.PostMealFullnessLevel && 
+                m.Mood == foodEntry.Mood 
             )), Times.Once, "The meal entry was not persisted as expected.");
         }
     }
