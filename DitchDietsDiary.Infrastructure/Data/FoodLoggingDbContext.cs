@@ -18,5 +18,14 @@ namespace DitchDietsDiary.Infrastructure.Data
 
         // DbSet for FoodEntryModel, which represents a table in the database
         public DbSet<FoodEntryModel> FoodEntries { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Explicitly configure the primary key
+            modelBuilder.Entity<FoodEntryModel>()
+                .HasKey(fe => fe.FoodEntryId);
+        }
     }
 }

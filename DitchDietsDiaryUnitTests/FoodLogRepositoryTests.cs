@@ -1,40 +1,61 @@
 ﻿using DitchDietsDiary.Core;
+using DitchDietsDiary.Infrastructure.Data;
 using DitchDietsDiary.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace DitchDietsDiaryUnitTests
 {
     public class FoodLogRepositoryTests
     {
         [Fact]
-        public void SaveMealEntry_StoresDataCorrectly()
+        public void GetMealEntry_WithFilters_ReturnsCorrectData()
         {
-            //Arrange
-            var foodLogRepository = new FoodLoggingRepository();
-            var foodEntry = new FoodEntryModel
+            // Arrange: Set up an in-memory database
+            var options = new DbContextOptionsBuilder<FoodLoggingDbContext>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            using var dbContext = new FoodLoggingDbContext(options);
+
+            dbContext.FoodEntries.Add(new FoodEntryModel
             {
+                FoodEntryId = 1,
                 FoodEntry = "Bacon avocado sandwich",
-                TimeEaten = DateTime.Now,
+                TimeEaten = new DateTime(2025, 4, 9),
                 PreMealHungerLevel = 1,
                 PostMealFullnessLevel = 8,
                 Mood = 9
-            };
-
-            var foodEntryRequest = new FoodEntryRequestModel
+            });
+            dbContext.FoodEntries.Add(new FoodEntryModel
             {
-                FoodEntryId = 1
-            };
+                FoodEntryId = 2,
+                FoodEntry = "Burger",
+                TimeEaten = new DateTime(2025, 4, 10),
+                PreMealHungerLevel = 4,
+                PostMealFullnessLevel = 6,
+                Mood = 7
+            });
+            dbContext.SaveChanges();
+
+            var repository = new FoodLoggingRepository(dbContext);
 
             // Act
-            foodLogRepository.SaveMealEntry(foodEntry);
+            var request = new FoodEntryRequestModel
+            {
+                FoodSearchTerm = "Bacon",
+                DateOfFoodEntry = new DateTime(2025, 4, 9)
+            };
+
+            var result = repository.GetMealEntry(request);
 
             //Assert
-            var storedEntry = foodLogRepository.GetMealEntry(foodEntryRequest); 
-            Assert.NotNull(storedEntry);
-            Assert.Equal(foodEntry.FoodEntry, storedEntry.FoodEntry);
-            Assert.Equal(foodEntry.TimeEaten, storedEntry.TimeEaten);
-            Assert.Equal(foodEntry.PreMealHungerLevel, storedEntry.PreMealHungerLevel);
-            Assert.Equal(foodEntry.PostMealFullnessLevel, storedEntry.PostMealFullnessLevel);
-            Assert.Equal(foodEntry.Mood, storedEntry.Mood);
+            Assert.NotNull(result);
+            Assert.Equal(1, result.FoodEntryId);
+            Assert.Contains("Bacon", result.FoodEntry);
+            Assert.Equal(new DateTime(2025, 4, 9), result.TimeEaten);
+            Assert.Equal(1, result.PreMealHungerLevel);
+            Assert.Equal(8, result.PostMealFullnessLevel);
+            Assert.Equal(9, result.Mood);
         }
     }
 }
