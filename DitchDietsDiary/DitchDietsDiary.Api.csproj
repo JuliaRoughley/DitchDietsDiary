@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationInsightsResourceId>/subscriptions/8107cec1-eaa0-47e3-b324-1ee5b6550b8a/resourceGroups/Mother-Yourself-Resources/providers/microsoft.insights/components/DitchDietsDiaryApi</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/8107cec1-eaa0-47e3-b324-1ee5b6550b8a/resourcegroups/DefaultResourceGroup-WEU/providers/microsoft.insights/components/DitchDietsDiaryApi</ApplicationInsightsResourceId>
     <UserSecretsId>4a2a56ea-2672-4f1a-bfe2-1f699785da9a</UserSecretsId>
   </PropertyGroup>
 
