@@ -1,6 +1,6 @@
 @DitchDietsDiary_HostAddress = http://localhost:5056
 
-GET {{DitchDietsDiary_HostAddress}}/weatherforecast/
+GET {{DitchDietsDiary_HostAddress}}/api/foodLog/
 Accept: application/json
 
 ###

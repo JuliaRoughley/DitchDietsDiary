@@ -4,7 +4,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "Mother-Yourself-Resources",
+      "defaultValue": "DefaultResourceGroup-WEU",
       "metadata": {
         "_parameterType": "resourceGroup",
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
@@ -12,7 +12,7 @@
     },
     "resourceGroupLocation": {
       "type": "string",
-      "defaultValue": "canadacentral",
+      "defaultValue": "westeurope",
       "metadata": {
         "_parameterType": "location",
         "description": "Location of the resource group. Resource groups could have different location than resources."
@@ -49,7 +49,7 @@
           "contentVersion": "1.0.0.0",
           "resources": [
             {
-              "name": "DitchDietsDiaryApiapi",
+              "name": "DitchDietsDiaryApi",
               "type": "Microsoft.ApiManagement/service",
               "location": "[parameters('resourceLocation')]",
               "properties": {
@@ -59,7 +59,7 @@
                 "hostnameConfigurations": [
                   {
                     "type": "Proxy",
-                    "hostName": "ditchdietsdiaryapiapi.azure-api.net",
+                    "hostName": "ditchdietsdiaryapi.azure-api.net",
                     "encodedCertificate": null,
                     "keyVaultId": null,
                     "certificatePassword": null,
@@ -95,7 +95,7 @@
             },
             {
               "type": "Microsoft.ApiManagement/service/apis",
-              "name": "DitchDietsDiaryApiapi/DitchDietsDiaryApi",
+              "name": "DitchDietsDiaryApi/DitchDietsDiaryApi",
               "properties": {
                 "displayName": "DitchDietsDiaryApi",
                 "apiRevision": "1",
@@ -118,7 +118,7 @@
               },
               "apiVersion": "2019-12-01",
               "dependsOn": [
-                "DitchDietsDiaryApiapi"
+                "DitchDietsDiaryApi"
               ]
             }
           ]

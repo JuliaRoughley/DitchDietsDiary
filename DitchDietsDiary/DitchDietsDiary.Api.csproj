@@ -20,4 +20,9 @@
     <ProjectReference Include="..\DitchDietsDiary.ServiceDefaults\DitchDietsDiary.ServiceDefaults.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Properties\ServiceDependencies\local\" />
+  </ItemGroup>
+
 </Project>
